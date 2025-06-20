@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+yid-tts-venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Audio files (too large for git)
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# Model files (too large for git)
+*.pth
+*.pt
+*.pkl
+*.model
+*.bin
+
+# Data directories
+alignment/
+TTS/
+yiddish24_audio/
+yiddish_24_transcribed/
+yiddish_tts_poc/
+tts-exp/
+content/
+small_audio/
+output/
+
+# CSV files (potentially large)
+*.csv
+metadata.csv
+yiddish24_index.csv
+
+# Lock files
+.~lock.*#
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log 

@@ -1,0 +1,16 @@
+# Core dependencies (all built-in Python modules)
+# The main TTS system uses only built-in Python modules for maximum compatibility
+
+# Optional dependencies for advanced features
+# Uncomment if you want to use advanced voice analysis features:
+# librosa>=0.10.0
+# scipy>=1.10.0
+# numpy>=1.24.0
+# torch>=2.0.0
+# torchaudio>=2.0.0
+
+# Development dependencies
+# Uncomment for development:
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0 
