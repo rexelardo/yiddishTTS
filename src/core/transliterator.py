@@ -49,32 +49,43 @@ class YiddishTransliterator:
         """Create common word replacements for better pronunciation."""
         return {
             # Common words that need special handling
-            'און': 'aun',
-            'אין': 'ayn', 
-            'איז': 'ayz',
+            'און': 'un',
+            'אין': 'in', 
+            'איז': 'iz',  # Fixed: was 'ayz', now 'iz'
             'דאס': 'das',
             'דער': 'der',
             'די': 'di',
-            'פון': 'pun',
+            'פון': 'fun',  # More accurate: was 'pun', now 'fun'
             'מיט': 'mit',
-            'אויף': 'aoyf',
+            'אויף': 'oyf',  # Simplified: was 'aoyf', now 'oyf'
             'צו': 'tsu',
-            'פאר': 'par',
+            'פאר': 'far',  # More accurate: was 'par', now 'far'
             'נאך': 'nokh',
             'אלע': 'ale',
             'וואס': 'vas',
             'ווען': 'ven',
-            'וואו': 'vau',
+            'וואו': 'vu',  # More accurate: was 'vau', now 'vu'
             'ווי': 'vi',
             'וועט': 'vet',
-            'האט': 'hat',
+            'האט': 'hot',  # More accurate: was 'hat', now 'hot'
             'זיין': 'zayn',
             'איר': 'ir',
             'זי': 'zi',
             'ער': 'er',
             'מיר': 'mir',
             'איך': 'ikh',
-            'דו': 'du'
+            'דו': 'du',
+            # Additional common words for better pronunciation
+            'באטראפן': 'betrofn',  # Your word from the example
+            'געווארן': 'gevorn',   # Your word from the example
+            'וועלן': 'veln',
+            'קענען': 'kenen',
+            'גיין': 'geyn',
+            'קומען': 'kumen',
+            'זאגן': 'zogn',
+            'טון': 'tun',
+            'געבן': 'gebn',
+            'נעמען': 'nemen'
         }
     
     def transliterate_char(self, char: str) -> str:
