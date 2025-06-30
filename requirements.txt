@@ -1,6 +1,10 @@
 # Core dependencies (all built-in Python modules)
 # The main TTS system uses only built-in Python modules for maximum compatibility
 
+# LLM Transliterator dependencies
+openai>=0.28.0
+python-dotenv>=1.0.0
+
 # Optional dependencies for advanced features
 # Uncomment if you want to use advanced voice analysis features:
 # librosa>=0.10.0

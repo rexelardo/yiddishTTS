@@ -1,3 +1,8 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
 # Python
 __pycache__/
 *.py[cod]
@@ -16,6 +21,8 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -26,23 +33,60 @@ yid-tts-venv/
 venv/
 env/
 ENV/
+.venv/
+.ENV/
+
+# Audio files (output)
+output/*.wav
+output/*.mp3
+output/*.flac
+*.wav
+*.mp3
+*.flac
+
+# Large model files
+*.pth
+*.bin
+*.safetensors
+models/
+checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
 *.ipynb
 
 # Audio files (too large for git)
-*.wav
-*.mp3
-*.flac
 *.m4a
 
 # Model files (too large for git)
-*.pth
 *.pt
 *.pkl
 *.model
-*.bin
 
 # Data directories
 alignment/
@@ -53,7 +97,6 @@ yiddish_tts_poc/
 tts-exp/
 content/
 small_audio/
-output/
 
 # CSV files (potentially large)
 *.csv
@@ -62,12 +105,6 @@ yiddish24_index.csv
 
 # Lock files
 .~lock.*#
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store

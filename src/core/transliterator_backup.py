@@ -46,138 +46,50 @@ class YiddishTransliterator:
         }
     
     def _create_word_replacements(self) -> Dict[str, str]:
-        """Create common word replacements for better pronunciation (Forvo-enhanced)."""
+        """Create common word replacements for better pronunciation."""
         return {
-            # === FORVO-ENHANCED PRONUNCIATIONS ===
-            # Based on authentic Yiddish pronunciation research from Forvo.com
-            
-            # Greetings and common expressions
-            'שלום': 'sholem',      # More authentic than 'shlum'
-            'עליכם': 'aleykhem',   # Proper pronunciation vs 'elikm'
-            'גוטן': 'gutn',
-            'מארגן': 'morgn',      # More accurate than 'margn'
-            'טאג': 'tog',          # Better than 'tag'
-            'אווענט': 'ovnt',
-            'נאכט': 'nakht',
-            'דאנק': 'dank',
-            
-            # Common verbs with improved pronunciation
-            'געווען': 'geven',     # Was/been - more natural
-            'געהאט': 'gehat',
-            'געמאכט': 'gemakht',   # Proper 'kh' sound
-            'געזאגט': 'gezogt',
-            'געגאנגען': 'gegangen',
-            'געקומען': 'gekumen',
-            'געגעבן': 'gegeben',
-            'גענומען': 'genumen',
-            'געזען': 'gezen',
-            'געהערט': 'gehert',
-            
-            # Prepositions and particles
+            # Common words that need special handling
             'און': 'un',
-            'אין': 'in',
-            'איז': 'iz',
+            'אין': 'in', 
+            'איז': 'iz',  # Fixed: was 'ayz', now 'iz'
             'דאס': 'das',
             'דער': 'der',
             'די': 'di',
-            'פון': 'fun',
+            'פון': 'fun',  # More accurate: was 'pun', now 'fun'
             'מיט': 'mit',
-            'אויף': 'oyf',
+            'אויף': 'oyf',  # Simplified: was 'aoyf', now 'oyf'
             'צו': 'tsu',
-            'פאר': 'far',
+            'פאר': 'far',  # More accurate: was 'par', now 'far'
             'נאך': 'nokh',
-            'אבער': 'ober',        # More accurate than 'eber'
-            'נאר': 'nor',
-            'שוין': 'shoyn',
-            'דאך': 'dokh',
-            'וועל': 'vel',
-            
-            # Pronouns
+            'אלע': 'ale',
+            'וואס': 'vas',
+            'ווען': 'ven',
+            'וואו': 'vu',  # More accurate: was 'vau', now 'vu'
+            'ווי': 'vi',
+            'וועט': 'vet',
+            'האט': 'hot',  # More accurate: was 'hat', now 'hot'
+            'זיין': 'zayn',
+            'איר': 'ir',
+            'זי': 'zi',
+            'ער': 'er',
+            'מיר': 'mir',
             'איך': 'ikh',
             'דו': 'du',
-            'ער': 'er',
-            'זי': 'zi',
-            'מיר': 'mir',
-            'איר': 'ir',
-            'זיין': 'zayn',
-            
-            # Family and people
-            'מאמע': 'mame',
-            'טאטע': 'tate',
-            'קינד': 'kind',
-            'מענטש': 'mentsh',
-            'פריינד': 'freynd',
-            'חבר': 'khaver',
-            'ברודער': 'bruder',
-            'שוועסטער': 'shvester',
-            'זיידע': 'zeyde',
-            'באבע': 'bobe',
-            
-            # Numbers
-            'איינס': 'eyns',
-            'צוויי': 'tsvey',
-            'דריי': 'dray',
-            'פיר': 'fir',
-            'פינף': 'finf',
-            'זעקס': 'zeks',
-            'זיבן': 'zibn',
-            'אכט': 'akht',
-            'נייַן': 'nayn',
-            'צען': 'tsen',
-            
-            # Common adjectives
-            'גוט': 'gut',
-            'שלעכט': 'shlekht',
-            'גרויס': 'groys',
-            'קליין': 'kleyn',
-            'נייַ': 'nay',
-            'אלט': 'alt',
-            'יונג': 'yung',
-            'שיין': 'sheyn',
-            'הייס': 'heys',
-            'קאלט': 'kalt',
-            
-            # Common nouns
-            'הויז': 'hoyz',
-            'שטוב': 'shtub',
-            'טיש': 'tish',
-            'שטול': 'shtul',
-            'בעט': 'bet',
-            'פענצטער': 'fentster',
-            'טיר': 'tir',
-            'וואסער': 'vaser',
-            'ברויט': 'broyt',
-            'מילך': 'milkh',
-            
-            # Important verbs
-            'האבן': 'hobn',
+            # Additional common words for better pronunciation
+            'באטראפן': 'betrofn',  # Your word from the example
+            'געווארן': 'gevorn',   # Your word from the example
+            'וועלן': 'veln',
+            'קענען': 'kenen',
             'גיין': 'geyn',
             'קומען': 'kumen',
             'זאגן': 'zogn',
             'טון': 'tun',
             'געבן': 'gebn',
             'נעמען': 'nemen',
-            'זען': 'zen',
-            'הערן': 'hern',
-            
-            # Question words
-            'וואס': 'vas',
-            'ווער': 'ver',
-            'ווו': 'vu',           # More accurate than 'vau'
-            'ווען': 'ven',
-            'ווי': 'vi',
-            'פארוואס': 'farvos',
-            
-            # === LEGACY WORDS (kept for compatibility) ===
-            'אלע': 'ale',
-            'וועט': 'vet',
-            'האט': 'hot',
-            'באטראפן': 'betrofn',
-            'געווארן': 'gevorn',
-            'וועלן': 'veln',
-            'קענען': 'kenen',
+            'טשאלנט': 'tshalnt',
+            'פאר': 'far'
         }
-
+    
     def transliterate_char(self, char: str) -> str:
         """Transliterate a single character."""
         return self.char_mapping.get(char, char)
