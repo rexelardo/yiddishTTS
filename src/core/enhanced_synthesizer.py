@@ -27,7 +27,7 @@ class EnhancedYiddishSynthesizer:
             'voice': 'pl', 
             'name': 'Polish (Eastern European)',
             'description': 'Polish accent - Eastern European Yiddish communities',
-            'speed': 135,
+            'speed': 125,
             'pitch': 48
         },
         'russian': {
